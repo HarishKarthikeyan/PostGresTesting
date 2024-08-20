@@ -1,0 +1,16 @@
+package com.junitdemo.demo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.junitdemo.demo.service.Calculator;
+
+@SpringBootTest
+class DemoApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+	
+	private Calculator calculator = new Calculator();
+}

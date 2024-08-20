@@ -1,0 +1,5 @@
+package com.junitdemo.demo.repository;
+
+public class PersonRepository {
+
+}

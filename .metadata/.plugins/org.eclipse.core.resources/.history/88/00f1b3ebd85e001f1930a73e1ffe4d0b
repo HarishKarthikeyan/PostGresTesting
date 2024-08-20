@@ -1,0 +1,24 @@
+package com.junitdemo.demo;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.junitdemo.demo.entity.Person;
+import com.junitdemo.demo.service.PersonService;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+	
+	  @Bean
+	    CommandLineRunner runner(PersonService personService) {
+	        return args -> {
+	            personService.savePerson(new Person(null, "John Doe", "New York"));
+	        };
+	    }
+}

@@ -1,0 +1,5 @@
+package com.junitdemo.demo.entity;
+
+public class Person {
+
+}

@@ -1,0 +1,27 @@
+package com.junitdemo.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.junitdemo.demo.entity.Person;
+import com.junitdemo.demo.repository.PersonRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+//@RequiredArgsConstructor
+public class PersonService {
+	@Autowired
+	private PersonRepository personRepository;
+	
+	public List<Person> getAllPerson(){
+		return personRepository.findAll();
+	}
+
+	public void savePerson(Person person) {
+		personRepository.save(person);
+	}
+
+}

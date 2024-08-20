@@ -1,0 +1,5 @@
+package com.junitdemo.demo.service;
+
+public class Calculator {
+
+}

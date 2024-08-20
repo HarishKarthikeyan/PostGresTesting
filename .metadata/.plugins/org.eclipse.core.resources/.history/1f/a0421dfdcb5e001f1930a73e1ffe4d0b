@@ -1,0 +1,14 @@
+package com.junitdemo.demo.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Person {
+	@Id
+	private Integer personId;
+	private String personName;
+	private String personCity;
+	
+
+}

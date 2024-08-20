@@ -1,0 +1,18 @@
+package com.example.Service;
+
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.stereotype.Service;
+
+@Service
+public class KafkaConsumer {
+
+	@KafkaListener(topics = "my-topic",groupId="my-group-id")
+	public void listen(String message) {
+		System.out.println("Msg from listner 1 in service 1:"+message);
+	}
+	
+	@KafkaListener(topics = "topic",groupId="my-group-id")
+	public void listner2(String msg) {
+		System.out.println("Msg from listner 2 in service 1:"+msg);
+	}
+}
